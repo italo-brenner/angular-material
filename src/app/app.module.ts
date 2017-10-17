@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
+import { MatToolbarModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 
@@ -19,7 +19,10 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],
