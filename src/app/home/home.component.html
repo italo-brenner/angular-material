@@ -1,18 +1,31 @@
-<div>
-  <mat-toolbar color="primary">
-    <span>
-      <mat-icon>mood</mat-icon>
-    </span>
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>
+      menu
+    </mat-icon>
+  </button>
+  <span>&nbsp;&nbsp;&nbsp;Material in Angular 6!</span>
+</mat-toolbar>
 
-    <span>Yay, Material in Angular 6!</span>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over">
+    <mat-list>
+      <mat-list-item>
+        <button mat-button>Item 1</button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <button mat-button>Item 2</button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <button mat-button>Item 3</button>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-sidenav>
 
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>more_vert</mat-icon>
-    </button>
-  </mat-toolbar>
-
-  <mat-menu x-position="before" #menu="matMenu">
-    <button mat-menu-item>Option 1</button>
-    <button mat-menu-item>Option 2</button>
-  </mat-menu>
-</div>
+  <mat-sidenav-content class="example-events">
+    <span>Simple Dashboard</span>
+  </mat-sidenav-content>
+</mat-sidenav-container>
